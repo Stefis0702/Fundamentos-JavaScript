@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4M7.2</title>
+</head>
+
+<body>
+    <h1>Números Primos</h1>
+
+
+    <p><button onclick="resultado()">Resultado</button></p>
+    <p id="resultado"></p>
+
+    <script>
+        function resultado() {
+
+            let vNumero = Math.abs(parseInt(document.getElementById("numero1").value));
+            let vPrimo = true;
+            let i=2;
+
+            while (i< vNumero && vPrimo) {
+                if (vNumero%i==0) {
+                    vPrimo= false;
+                    
+                }
+                i++;
+            } 
+            if(vPrimo==false){
+                document.getElementById("resultado").innerHTML = "El número "+ vNumero + " NO es un número primo.";
+            }else {
+                document.getElementById("resultado").innerHTML = "El número "+ vNumero + " SI es un número primo.";
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

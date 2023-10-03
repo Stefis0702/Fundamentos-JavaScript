@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUCLE FOR</title>
+</head>
+<body>
+  <p id="mostrar">Números del 1 al 10: </p>
+  <p><button onclick="UnoADiez()">Números del 1 al 10</button></p>
+  <p id="mostrar1">Números pares del 1 al 10: </p>
+  <p><button onclick="ParesUnoADiez()">Números pares del 1 al 10</button></p>
+  <p id="mostrar2">Números del 10 al 1: </p>
+  <p><button onclick="DiezAUno()">Números  del 10 al 1</button></p>
+  <p id="mostrar3">Números del 50 al 0 de 5 en 5: </p>
+  <p><button onclick="CincuentaACero()">Números del 50 al 0</button></p>
+  <p>Números del 1 al 5 en lista:</p>
+  <ul id="mostrar4"></ul>
+  <p><button onclick="NumerosEnLista()">Números en Lista</button></p>
+  <p>Número de asteriscos del cuadrado: <input type="number" id="numAsteriscos"></p>
+  <p id="cuadrado"></p>
+  <p><button onclick="cuadradoAsteriscos()">Cuadrado de Asteriscos</button></p>
+
+
+
+  <script>
+    function UnoADiez() {
+    // i++ equivale a i=i+1 o a i+=1
+
+    for (let i=1; i<=10; i++) {
+      document.getElementById("mostrar").innerHTML += i + ",";
+    }
+  }
+
+  function ParesUnoADiez() {
+    for (let i=2; i<=10; i+=2) {
+      document.getElementById("mostrar1").innerHTML += i + ",";
+    }
+  }
+  function DiezAUno() {
+    for (let i=10; i>=1; i--) {
+      document.getElementById("mostrar2").innerHTML += i + ",";
+    }
+  }
+  function CincuentaACero() {
+    for (let i=50; i>=0; i-=5) {
+      document.getElementById("mostrar3").innerHTML += i + ",";
+    }
+  }
+
+  function NumerosEnLista() {
+    for (let i=1; i<=5; i++) {
+      document.getElementById("mostrar4").innerHTML += "<li>" + i + "</li>";
+    }
+  }
+
+  function cuadradoAsteriscos() {
+    let num=parseInt(document.getElementById('numAsteriscos').value);
+
+    document.getElementById("cuadrado").innerHTML="";
+
+    for (let fila=1; fila<=num; fila++) { //controla las filas
+        document.getElementById("cuadrado").innerHTML += "fila " + fila;
+
+        for (let columna=1; columna<=num; columna++) { //pinta las columnas del cuadro
+            document.getElementById("cuadrado").innerHTML += " * ";
+        }
+      
+        document.getElementById("cuadrado").innerHTML += "<br>";
+    }
+  }
+
+
+
+
+  </script>
+
+</body>
+</html>

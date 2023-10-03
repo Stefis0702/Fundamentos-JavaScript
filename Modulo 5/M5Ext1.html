@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ext1M5</title>
+</head>
+
+<body>
+    <h1>Frio,frio - Caliente,caliente</h1>
+    <p>Ahora dame un número hasta adivinar el que he pensado..!!</p>
+    <p>mientras, yo te daré pistas de que tan cerca o lejos estás..</p>
+    
+
+    <p><button onclick="jugar()"> A Jugar..!!</button></p>
+
+    <p id="resultado"></p>
+
+
+    <script>
+        function jugar() {
+
+            let vOrdenador =Math.floor((Math.random() * (500-1))+1);
+            console.log(vOrdenador)
+            let vUsuario = 0;
+            let vCos=0;
+            
+
+            do {
+                vUsuario = Number(prompt("Indica un número"));
+                let vCos= vOrdenador-vUsuario;
+
+                if (vCos >40 && (vUsuario > vOrdenador ) ) {
+                    vUsuario = alert("Frio-Frio.....Tu número es mayor")
+
+                } 
+                if (vCos >40 && (vUsuario < vOrdenador ) ) {
+                    vUsuario = alert("Frio-Frio.....Tu número es menor")
+
+                } 
+
+                if (vCos <=10 && (vUsuario > vOrdenador ) ) {
+                    vUsuario = alert("Caliente-Caliente.....Tu número es mayor, pero estas cerca")
+
+                } 
+                if (vCos <=10 && (vUsuario < vOrdenador ) ) {
+                    vUsuario = alert("Caliente-Caliente.....Tu número es menor, pero estas cerca")
+
+                } 
+               
+            } while (vUsuario != vOrdenador) {
+                document.getElementById("resultado").innerHTML = "Enhorabuena..! el número era " + vOrdenador +
+                    "y el tuyo " + vUsuario
+            
+            
+        }
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

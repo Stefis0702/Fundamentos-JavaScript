@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body {
+         margin: 0 auto;
+         width: 80%;
+         font-family: 'Segoe UI', 'Open sans', Geneva, Verdana, sans-serif;
+      }
+
+      #container {
+         padding: 0.5em 2em 0.5em 2em;
+      }
+
+      .pregunta {
+         color: rgba(24, 24, 122, 0.876);
+      }
+
+      .respuesta {
+         color: rgb(161, 13, 13);
+      }
+
+      .noSpace {
+         margin: 0;
+      }
+
+      em {
+         color: red;
+      }
+
+      button {
+         width: 20em;
+         text-align: left;
+      }
+   </style>
+   <title>Examen FDLP</title>
+</head>
+
+<body>
+   <div id="container">
+      <h1>Fonaments de la Programació. Examen de JavaScript. </h1>
+      <ol>
+         <li>Llegir atentament el contingut de la prova.</li>
+         <li>Omplir les dades del vostre nom a l'HTML.</li>
+         <li>Els botons a utilitzar així com el nom de les funcions a crear ja estan donats a l'HTML.</li>
+      </ol>
+      <hr>
+      <h2>Estudiant: <em>Stephanie Lame Martinez</em></h2>
+      <div class="pregunta">
+         <p>Crear un fitxer <strong>main.js</strong> i enllaçar-lo a aquest .html.<br>
+            Crear les funcions necessàries <mark>i cridar-les des dels botons d'aquest HTML</mark>, per donar solució
+            als plantejaments següents:</strong></p>
+         <h3>Pregunta 1</h3>
+         <p>Crear la funció <em>p1()</em>, la qual donat el següent array: <strong>8, 9, 5, 2, 1, 4, 6, 1, 2,
+               3</strong><br>
+            amb un únic bucle <strong>for</strong>, realitzeu la suma i la multiplicació dels elements que siguin
+            múltiples de 3:</p>
+         <p>Mostrar les respostes als span amb id <em>suma</em> i <em>multiplica</em> respectivament.</p>
+      </div>
+      <div class="respuesta">
+         <h3>Solució pregunta 1</h3>
+         <p><button onclick='p1()'>P1. Resultat</button></p>
+         <ol>
+            <li>Suma dels elements de l'array: <span id="suma"> </span></li>
+            <li>Multiplicació dels elements de l'array: <span id="multiplica"> </span></li>
+         </ol>
+      </div>
+      <hr>
+      <div class="pregunta">
+         <h3>Pregunta 2</h3>
+         <ol style="list-style-type:lower-alpha;">
+            <li>Crear una classe Persona amb els atributs següents:</li><!-- a -->
+            <ul>
+               <li>DNI</li>
+               <li>nom</li>
+               <li>cognom</li>
+               <li>edat</li>
+               <li>hobbies (array de hobbies: String)</li>
+            </ul>
+            <p>I els següents mètodes</p>
+            <ul>
+               <li><b>esMajorDeEdat</b>: que tornarà true en cas que la persona sigui major de 18 anys.</li>
+               <li><b>afegirHobby(valor)</b>: permet afegir un hobbie a l'array de hobbies de la persona.</li>
+               <li>El métode <b>toString()</b> que haurà de mostrar tots els atributs i mètodes de l'objecte.</li>
+            </ul>
+            <br>
+            <li>Enllaçar el fitxer amb la classe a aquest .html</li><!-- b -->
+            <li>Crear <b>tres</b> persones <em>manualment</em> des del codi, (utilitzant la classe) i guardar-les en un
+               array</li><!-- c -->
+            <p><em>Directament, sense programar funcions de cerca:</em></p>
+            <li>Mostrar a la consola les dades de la segona persona introduïda. (Funció <em>p2d()</em>)</li> <!-- d -->
+            <li>Prova el mètode <strong>afegirHobby</strong> afegint (manualment) dos hobbies a la primera persona de
+               l'array.
+               Mostra les dades de la <strong>primera</strong> persona amb un <strong>alert</strong>. (Funció
+               <em>p2e()</em>)</li>
+         </ol>
+      </div>
+      <div class="respuesta">
+         <h3>Solución pregunta 2</h3>
+         <p><button onclick='p2d()'>P2d. Dades de la segona persona </button></p>
+         <p><button onclick='p2e()'>P2e. Dades de la primera persona</button></p>
+
+      </div>
+   </div>
+   <script src="./js/clase.js"></script>
+   <script src="./js/main.js"></script>
+
+</body>
+
+</html>

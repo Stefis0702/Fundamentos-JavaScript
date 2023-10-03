@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3M7.3</title>
+</head>
+
+<body>
+    <details>
+        <summary> Ejercicio 3 Modulo 7.3 </summary>
+        <p> El usuario/a debe introducir una frase y el programa debe decir si la frase es un palíndromo.</p>
+
+    </details>
+    <h1>Palíndromo</h1>
+    <p>El texto introducido fue:</p><p id="frase"></p>
+    <p><button onclick="palindromo(cadena)">Comprobemos</button></p>
+    <p id="respuesta"></p>
+
+    <script>
+        
+
+        let cadena = prompt("Introduce el texto");
+        document.getElementById("frase").innerHTML= cadena;
+        
+     
+
+        function palindromo(cadena) {
+
+
+            let cadenaOrig = cadena.toLowerCase();
+            let resultado = "La cadena\""+(cadenaOrig)+"\" \n";
+            let letrasEspacios = cadenaOrig.split("");
+            let cadenaSinEs = "";
+
+            for (i in letrasEspacios) {
+                if (letrasEspacios[i] != " ") {
+                    cadenaSinEs += letrasEspacios[i];
+                }
+
+
+            }
+
+            let letras = cadenaSinEs.split("");
+            let letrasReves = cadenaSinEs.split("").reverse();
+            let iguales = true;
+
+            for (i in letras) {
+                if (letras[i] == letrasReves[i]) {
+                    
+                } else {
+                    iguales = false;
+
+                }
+
+            }
+            if (iguales) {
+                resultado += "Es un palíndromo";
+            } else{
+                resultado += "No es un palíndromo";
+            }
+            document.getElementById("respuesta").innerHTML = resultado;
+        
+
+        }  
+    </script>
+
+</body>
+
+</html>

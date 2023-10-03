@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8M7.1</title>
+</head>
+<body>
+    <h1>Convertidor</h1>
+    <p>Escribe la temperatura en grados:</p>
+    <p>temperatura:<input type="number" id="num1" value>ºC</p>
+   
+    <p><button onclick="calcular()">Convertir</button></p>
+    <p id="resultado"></p>
+
+
+    <script>
+        function calcular() {
+
+            let vTemp = Number(document.getElementById("num1").value);
+            const K= 32
+            let vConver = (((vTemp * 9)/5)+ K)
+           
+
+            document.getElementById("resultado").innerHTML = " el resultado de convertir "+ vTemp + "ºC"+ " en Fahrenheit es: " + vConver + "ºF";
+    
+
+        }
+    </script>
+</body>
+</html>

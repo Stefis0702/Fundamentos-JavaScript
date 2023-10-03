@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1M7.1</title>
+</head>
+
+<body>
+    <h1>Calcular notas</h1>
+
+    
+    <p><button onclick="calcular()">Resultado</button></p>
+
+    <p id="resultado"></p>
+
+
+    <script>
+        function calcular() {
+
+            let vNum = parseInt(prompt("Ingresa el numero de notas", " 2"));
+            let vNotas = [];
+            let vResul = "";
+            
+
+            for (let i = 0; i < vNum; i++) {
+  
+ 
+         let nota = parseFloat(prompt("Introduzca la nota del alumno " + (i+1) + ":"));
+         vNotas.push(nota);
+  }
+        
+        let vPromedio= vNotas.reduce((a, b) => a + b, 0) /vNum;
+        
+
+        if ((vPromedio >= 0) && (vPromedio < 5)) {
+                    document.getElementById("resultado").innerHTML =
+                    "La nota media de la clase está suspendida. Los alumnos/as deberían preguntar sus dudas y trabajar más" ;
+                } else if ((vPromedio >= 5) && (vPromedio < 7)) {
+                    document.getElementById("resultado").innerHTML =
+                    "La nota media de la clase es buena, pero los alumnos/as deberían mejorar el trabajo personal";
+                } else if (vPromedio >= 7) {
+                    document.getElementById("resultado").innerHTML =
+                    "¡Enhorabuena! La nota media de la clase se corresponde con el esfuerzo realizado";
+                }
+}
+    </script>
+
+</body>
+
+</html>

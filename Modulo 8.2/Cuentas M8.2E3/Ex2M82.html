@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX3M8.2</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <details>
+        <summary><br><b> Ejercicio 3 Modulo 8.2 </b></summary>
+        <p> Date el diagrama de clases de la imagen.
+
+            Programa una aplicación que tenga 5 botones:<br>
+            
+            1.- Crear client/a.<br>
+            2.- Eliminar client/a.<br>
+            3.- Crear cuenta de un cliente/a.<br>
+            4.- Ingresar euros en una cuenta de un cliente/a.<br>
+            5.- Retirar euros en una cuenta de un cliente/a.<br>
+            A tener en cuenta:<br>
+            - El saldo inicial de todas las cuentas  debe  ser  0€.<br>
+            -  Al  crear un cliente, no tendrá que tener ninguna cuenta “asociada”.<br>
+            - El diagrama  UML  muestra las propiedades y métodos mínimos que deben tener las clases, <br>
+            pero puedes crear más si es necesario.</p>
+            <img src="./img/enunciado.jpg" alt="">
+    </details>
+
+    <h1 class="titulos">GESTION DE CLIENTES</h1>
+     
+    <p  class="busqueda"></p>
+
+    <p class="botones">
+    <button onclick="crearCliente()">Crear Cliente</button>
+    <button onclick="crearCuenta()">Crear Cuenta</button>
+    <button onclick="eliminarCliente()">Eliminar Cliente</button>
+    <button onclick="ingresarDinero()">Ingresar Dinero</button>
+    <button onclick="retirar()">Retirar Dinero</button>
+    <button onclick="mostrarCliente()">Mostrar clientes</button>
+    <button onclick="salir()">Salir</button>
+    </p>
+
+    
+   
+    <!-- <p  class="busqueda">Dni Cliente: <input type="text" id= "busca"><button onclick="buscarcliente()">Continuar</button></p> -->
+
+
+      <!-- <div id="contenedor" class="contenedor1"> -->
+    <!-- <p>DNI: <input type="text" id="Dni"></p> -->
+    <!-- <p>NOMBRE:<input type="text" id="nombre"></p> -->
+    <!-- <p>APELLIDO:<input type="text" id="apellido"></p> -->
+    <!-- <p id="cuent">CUENTA:<input type="text" id="cuenta"></p> -->
+    <!-- <p id="sal">SALDO:<input type="text" id="saldo"></p> -->
+    <!-- </div> -->
+
+    <p class="alerta" id="titulo2"></p>
+    <script src="./js/clasecliente.js"></script>
+    <script src="./js/maincliente.js"></script>
+   
+
+</body>
+</html>

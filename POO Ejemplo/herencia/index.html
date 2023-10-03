@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERENCIA</title>
+  <style>
+    body {margin: 1em 2em;}
+    button {width: 12em;}
+  </style>
+</head>
+<body>
+  <details>
+    <summary><mark><strong>Enunciado</strong></mark></summary>
+    <p>La empresa ACME,sl. desea llevar un registro de sus empleados, a los cuales tiene clasificados por tipo de contrato: Fijos, Externos y Prácticas.</p>
+
+    <p>Los datos comunes a los todos los tipos de empleado son: dni, nombre, apellido, sexo, fechaInicio y sueldo.</p>
+    <ul>
+      <li>Los empleados <strong>Fijos</strong> tienen adicionalmente un atributo <b>tipo</b> que guarda la modalidad del contrato (tiempo completo, tiempo parcial o fijo discontinuo).</li>
+      <li>En el caso de los empleados <strong>Externos</strong> se desea guardar la empresa ETT de donde provienen y la comisión a pagar a esta empresa.</li>
+      <li>Respecto de los empleados en <strong>Prácticas</strong> se desea guardar la institución educativa de donde provienen y la fecha de fin de las prácticas en la empresa.</li>
+    </ul>
+    <p>Se desea poder dar de alta, mostrar los datos, modificar y eliminar empleados del registro.</p>
+    <p>El diagrama UML se muestra a continuación:</p>
+    <p><img src="./img/herencia.png" alt="composición" width="450px"></p>
+
+    <hr>
+  </details>
+  <h1>Registro de Empleados ACME, sl</h1>
+  <p><button onclick="agregar()">Agregar empleado</button></p>
+  <p><button onclick="modificar()">Modificar empleado</button></p>
+  <p><button onclick="eliminar()">Eliminar empleado</button></p>
+  <p><button onclick="mostrar()">Mostrar Datos</button></p>
+
+  <p id="datos"></p>
+
+  <script src="./js/clases.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

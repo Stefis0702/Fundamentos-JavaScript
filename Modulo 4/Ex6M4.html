@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6M4</title>
+</head>
+
+<body>
+    <h1>Signos del Zodiaco</h1>
+    <p>Indica tu dia y mes de nacimiento para saber que signo te corresponde</p>
+    <p>Mes: <input type="number" id="mes"></p>
+    <p>Día: <input type="number" id="dia"></p>
+    <p><button onclick="enviar()"> Enviar</button></p>
+    <p id="resultado"></p>
+
+    <script>
+        function enviar() {
+
+            let vMes = Number(document.getElementById("mes").value);
+            let vDia = Number(document.getElementById("dia").value);
+            let vSigno = " "
+
+
+            switch (vMes) {
+                case 1:
+                    vSigno = (vDia >= 20) ? "Acuario" : "Capricornio";
+                    break;
+                case 2:
+                    vSigno = (vDia >= 19) ? "Piscis" : "Acuario";
+                    break;
+                case 3:
+                    vSigno = (vDia >= 21) ? "Aries" : "Piscis";
+                    break;
+                case 4:
+                    vSigno = (vDia >= 20) ? "Tauro" : "Aries";
+                    break;
+                case 5:
+                    vSigno = (vDia >= 21) ? "Géminis" : "Tauro";
+                    break;
+                case 6:
+                    vSigno = (vDia >= 21) ? "Cáncer" : "Géminis";
+                    break;
+                case 7:
+                    vSigno = (vDia >= 23) ? "Leo" : "Cáncer";
+                    break;
+                case 8:
+                    vSigno = (vDia >= 23) ? "Virgo" : "Leo";
+                    break;
+                case 9:
+                    vSigno = (vDia >= 23) ? "Libra" : "Virgo";
+                    break;
+                case 10:
+                    vSigno = (vDia >= 23) ? "Escorpión" : "Libra";
+                    break;
+                case 11:
+                    vSigno = (vDia >= 22) ? "Sagitario" : "Escorpión";
+                    break;
+                case 12:
+                    vSigno = (vDia >= 22) ? "Capricornio" : "Sagitario";
+                    break;
+
+                default:
+                    vSigno = "Error!.. el mes debe estar entre 1 y 12"
+                    
+                    break;
+            }
+            document.getElementById("resultado").innerHTML = vSigno;
+        }
+    </script>
+</body>
+
+
+</html>

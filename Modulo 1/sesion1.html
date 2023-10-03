@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--CONFIGURAR LA PAGINA WEB-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMERA SESION DE CLASE</title>
+</head>
+<body>
+    <h1 id="principal">titulo</h1>
+    <h2 id="saludo">subtitulo 2</h2>
+    <h3>subtitulo 3</h3>
+
+    <p>Dime tu nombre <input type="text" id="nombre"></p>
+    <button onclick="buscar()">DECIR HOLA</button>
+<script>
+    document.getElementById("principal").innerHTML= "BIENVENIDOS A JAVACRIPT";
+
+    
+    function buscar(valor){
+    let encontrado=false;
+    let indice= -1
+    let i= 0
+    let vueltas=vIma.length;
+
+    while(i< vueltas && !encontrado){
+        if(valor== vIma[i].nombre){
+            indice= i;
+            encontrado = true;
+        }
+        i++;
+    }
+    return indice;
+}
+let valor;
+</script>
+
+</body>
+</html>

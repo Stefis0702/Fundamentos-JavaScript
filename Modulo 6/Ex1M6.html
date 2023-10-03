@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Jugemos</h1>
+    <p>ahora dame un número de personas:</p>
+    <p>Cantidad: <input type="number" id="numero1" value></p>
+    <p id="datos"></p>
+    <p><button onclick="calcular()">Resultado</button></p>
+    <p id="resultado1"></p>
+  
+
+
+    <script>
+        function calcular() {
+
+            
+            let vUsuario = document.getElementById("numero1").value;
+            let vIntentos = 5;
+            console.log(vOrdenador);
+            console.log(vUsuario);
+
+            do {
+                vUsuario = Number(prompt("Indica un número"));
+
+            } while (vUsuario != vOrdenador && vIntentos > 0) {
+                vUsuario = prompt("Intento " + vIntentos + " Indica un número")
+                if (vUsuario != vOrdenador) {
+                    vUsuario = alert("Intenta de nuevo....")
+
+                }
+                vIntentos--;
+
+            }
+            if (vUsuario == vOrdenador) {
+                document.getElementById("resultado").innerHTML = "Enhorabuena..! el número era " + vOrdenador +
+                    "y el tuyo " + vUsuario
+            } else {
+                document.getElementById("resultado").innerHTML = "Se te acabaron los intentos, el número era" +
+                    vOrdenador
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

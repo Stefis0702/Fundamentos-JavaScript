@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintura</title>
+</head>
+<body>
+    <h1>Pintura a usar</h1>
+    <p>Para iniciar coloca las medidas en <b>METROS</b> de la pared:</p>
+    <p>Ancho:<input type="number" id="numero1" value</p>
+    <p>Alto:<input type="number" id="numero2" value</p>
+    <p>para completar la información coloca cuantas capas de pintura deseas:</p>
+    <p>Capas:<input type="number" id="numero3" value</p>
+    <p><button onclick="calcular()">Calcular</button></p>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+
+            const promMetros= 12
+
+            let vAncho= Number(document.getElementById("numero1").value);
+            let vAlto= Number(document.getElementById("numero2").value);
+            let vCapas= Number(document.getElementById("numero3").value);
+            let vMetros= (vAncho * vAlto);
+            let vPintura=((vMetros/ promMetros)*(vCapas));
+            vPintura= vPintura.toFixed(2);
+
+            document.getElementById("resultado").innerHTML= "Para pintar"+" "+ (vMetros)+" "+"metros con"+" "+(vCapas)+" "+"capas necesitaras"+" "+(vPintura)+" "+" "+"litros de pintura."
+
+
+
+
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

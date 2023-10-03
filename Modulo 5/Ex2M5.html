@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2M5</title>
+</head>
+
+<body>
+    <h1>Sumemos</h1>
+    <p>Ahora escribe dos numeros:</p>
+    <p>Número 1:<input type="number" id="num1" value></p>
+    <p>Número 2:<input type="number" id="num2" value></p>
+
+    <p><button onclick="calcular()">Resultado</button></p>
+    <p id="resultado"></p>
+
+
+    <script>
+        function calcular() {
+
+            let vNumero1 = parseInt(document.getElementById("num1").value);
+            let vNumero2 = parseInt(document.getElementById("num2").value);
+            let tem = 0;
+
+            if (vNumero1 > vNumero2) {
+                tem = vNumero1;
+                vNumero1 = vNumero2;
+                vNumero2 = tem;
+            }
+            let sumatoria = 0;
+
+
+            for (let i = vNumero1; i <= vNumero2; i++) {
+                sumatoria += i;
+            }
+            document.getElementById("resultado").innerHTML=sumatoria;
+
+        }
+    </script>
+</body>
+
+</html>

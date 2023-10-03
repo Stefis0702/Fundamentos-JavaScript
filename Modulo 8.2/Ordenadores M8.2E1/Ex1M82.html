@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX1M8.2</title>
+</head>
+<body>
+    <details>
+        <summary><br><b> Ejercicio 1 Modulo 8.2 </b></summary>
+        <p> Crea una clase en JavaScript llamada "Ordenador", en un archivo llamado ordenador.js<br>
+
+            Esta clase tendrá como atributos la marca, modelo, procesador, cantidad de memoria RAM y capacidad del disco duro.<br>
+            
+            Además del constructor, debe disponer de los siguientes métodos:<br>
+            
+            Métodos que permitan consultar cada uno de los atributos (getters).<br>
+            Métodos que permitan modificar el procesador, la cantidad de memoria ramo y la capacidad del disco duro. (setters).<br>
+            Un método que recibirá un parámetro y devolverá una frase que diga:<br>
+            "En estos momentos se está ejecutando: 'X'" (X es el parámetro recibido por el método y que normalmente será el nombre de un programa).<br>
+            Ejemplo:  "En estos momentos se está ejecutando: Chrome"<br> 
+            Un método que devolverá una descripción completa del ordenador (toString()).<br>
+            En otro archivo llamado main.js, crea la función crear Ordenadores() .<br>
+            
+            Dentro de esta función, pediremos al usuario mediante promtps los datos de dos ordenadores. <br>
+            
+            Una vez introducidos los datos de ambos ordenadores, llama a los métodos de la clase Ordenador para comprobar que funcionan correctamente.<br></p>
+
+    </details>
+
+    <h1 style="color:red">Clase Ordenador</h1>
+
+    <p><button onclick="crearOrdenador()">Crear Ordenador</button></p>
+    <p id="respuesta1"></p>
+    <p>
+    <button onclick="mostrarDatos()" id="b1">Mostrar datos ordenador</button>
+    <button onclick="modificarDatos()" id="b2">Modificar datos ordenador</button>
+    <button onclick="ejecutarPrograma()" id="b3">Ejecutar Programa</button>
+    <button onclick="alertaOrdenador()" id="b4">Alerta ordenador</button>     <!-- toString -->
+    </p>
+
+   
+
+
+    <script src="./js/clases.js"></script>
+    <script src="./js/ordenadores.js"></script>
+    <script src="./js/main.js"></script>
+   
+
+</body>
+</html>

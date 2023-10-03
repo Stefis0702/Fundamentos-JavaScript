@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2M7.3</title>
+</head>
+<body>
+    <details>
+        <summary> Ejercicio 2 Modulo 7.3 </summary>
+        <p> En este programa el usuario debe introducir un string y, utilizando un bucle for ,
+             el programa debe mostrar el string al revés.</p>
+
+    </details>
+    <h1>String al revés</h1>
+    <p>Introduce aquí: <input type="text" id="frase"></p>
+    <p><button onclick="jugar()">Devolver</button></p>
+    <p id="respuesta"></p>
+
+    <script>
+        function jugar(){
+
+        let vFrase= document.getElementById("frase").value;
+        
+
+        for (let i = vFrase.length - 1; i >= 0; i--){
+            document.getElementById("respuesta").innerHTML += vFrase.charAt(i);
+        }
+        }
+
+
+    </script>
+    
+</body>
+</html>

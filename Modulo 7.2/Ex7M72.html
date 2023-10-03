@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7M7.2</title>
+</head>
+
+<body>
+    <h1>Año Bisiesto</h1>
+    <p>Ahora calculemos si un año es bisiesto o no.</p>
+    <p>Año: <input type="number" id="any" value="0"></p>
+    <p><button onclick="calcular()">Calcular</button></p>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+
+            let vA = Number(document.getElementById("any").value);
+            let vRe= "";
+
+           
+            if(vA% 400==0){
+                vRe= "El año SI es bisiesto";
+            }else if (vA% 4==0 && vA% 100 !=0){
+                vRe= "El año SI es bisiesto";
+            }else{
+                vRe= "El año NO es bisiesto";
+            }
+            document.getElementById("resultado").innerHTML= vRe
+        }
+    </script>
+
+</body>
+
+</html>

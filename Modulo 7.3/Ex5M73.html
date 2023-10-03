@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5 M7.3</title>
+</head>
+
+<body>
+    <details>
+        <summary> Ejercicio 5 Modulo 7.3 </summary>
+        <p> Comprobar si una frase introducida por el usuario está formada sólo por minúsculas,<br>
+            sólo por mayúsculas o por minúsculas y mayúsculas. </p>
+
+    </details>
+    <h1>Frases</h1>
+    
+    <p>Introduce una frase:<input type="text" id="frase" value></p>
+    
+    <p><button onclick="analizar()">Comprobar</button></p>
+
+    <p id="respuesta"></p>
+
+    <script>
+
+        function analizar(){
+
+        let vFrase= document.getElementById("frase").value;
+        console.log("frase", vFrase)
+        let vComp=[];
+        
+
+        for(let i=0;i<vFrase.length-1;i++){
+            vComp.push(vFrase.codePointAt(i));
+        }
+        
+        let mayus=vComp.filter(element=>element>64 && element < 91);
+        let minus=vComp.filter(element=>element>96 && element < 123);
+
+        let Rmayus=Number(mayus.length);
+        let Rminus=Number(minus.length);
+
+        if(mayus.length==0){
+            document.getElementById("respuesta").innerHTML="la frase esta compuesta solo por minusculas";
+        }else if (minus.length==0){
+            document.getElementById("respuesta").innerHTML="la frase esta compuesta solo por mayusculas";
+        }else{
+            document.getElementById("respuesta").innerHTML="la frase introducida esta compuesta por "+ Rmayus + " mayusculas y por "+ Rminus + " minusculas";
+        }
+       
+    }
+
+    
+    </script>
+
+</body>
+
+</html>

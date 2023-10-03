@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4Ext1</title>
+</head>
+<body>
+    <h1>Averiguemos si son divisibles</h1>
+    <p>Ahora dame un primer numero:</p>
+    <p>Dividendo: <input type="number" id="numero1" value="0"></p>
+    <p>Ahora dame otro numero comprendido entre 2 y 7:</p>
+    <p>Divisor: <select id="numero2">
+        <option></option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        </select>
+    </p>
+    <p><button onclick="calcular()">Resultado</button></p>
+    <p id="resultado"></p>
+    
+
+
+    <script>
+        function calcular() { 
+
+
+        let vDividendo= parseInt(document.getElementById("numero1").value);
+        let vDivisor= parseInt(document.getElementById("numero2").value);
+        
+        if (vDividendo%vDivisor==0){
+            document.getElementById("resultado").innerHTML="El número " + vDividendo + "es multiplo de " + vDivisor;
+
+        }else {
+            document.getElementById("resultado").innerHTML="No son multiplos";
+        }
+
+
+        
+        }
+
+     </script>
+</body>
+</html>

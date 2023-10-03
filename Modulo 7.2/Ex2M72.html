@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1M72</title>
+</head>
+
+<body>
+    <h1>Triangulo..!!</h1>
+    <p>Escribe el número de lineas que deseas:<input type="number" id="num" value></p>
+
+
+    <p><button onclick="dibujar()">Dibujar</button></p>
+    <p id="triangulo"></p>
+
+    <script>
+        function dibujar() {
+
+            let vNum = parseInt(document.getElementById("num").value);
+
+            var aste = "*"
+
+            document.getElementById("triangulo").innerHTML = " ";
+
+            if (vNum == 0 || vNum > 30) {
+                document.getElementById("triangulo").innerHTML = "Solo es posible asignar un número entre 1 y 30"
+
+            } else {
+
+                for (let i = vNum; i >= 1; i--) {
+
+                for (let j = i; j >= 1; j--) {
+                    document.getElementById("triangulo").innerHTML += aste; 
+                }
+                document.getElementById("triangulo").innerHTML += "<br>"
+
+
+
+
+
+
+
+            }
+     }
+    }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Ahora dame dos números!</h1>
+
+    <p>Valor 1: <input type="number" id="numero1" value></p>
+    <p>Valor 2: <input type="number" id="numero2" value</p>
+    <p><button onclick="calcular()">Resultado</button></p>
+    <p id="suma"></p>
+    <p id="resta"></p>
+    <p id="multiplicacion"></p>
+    <p id="division"></p>
+
+
+    <script>
+        function calcular() { 
+
+
+        let vValor1= parseInt(document.getElementById("numero1").value);
+        let vValor2= parseInt(document.getElementById("numero2").value);
+            
+        document.getElementById("numero1").value= vValor1
+        document.getElementById("numero2").value= vValor2
+
+
+        let vSuma= vValor1 + vValor2;
+        let vResta= vValor1 - vValor2;
+        let vMultiplicacion= vValor1 * vValor2;
+        let vDivision= vValor1 / vValor2;
+
+        
+        document.getElementById("suma").innerHTML="El resultado de la suma ès" +" " + (vSuma);
+        document.getElementById("resta").innerHTML="El resultado de la resta ès" +" " + (vResta);
+        document.getElementById("multiplicacion").innerHTML="El resultado de la multiplicacion ès" +" " + (vMultiplicacion);
+        document.getElementById("division").innerHTML="El resultado de la division ès" +" " + (vDivision);
+    
+
+    
+
+    
+
+
+       }
+    </script>
+</body>
+</html>

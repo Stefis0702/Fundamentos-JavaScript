@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2M7.1</title>
+</head>
+<body>
+    <h1>Par o Impar</h1>
+
+    <p>Ahora dame un número y averiguemos si es par o impar:</p>
+    <p>Número:<input type="number" id="numero" value></p>
+
+    <p><button onclick="calcular()">Resultado</button></p>
+    <p id="resultado"></p>
+   
+
+    <script>
+        function calcular(){ 
+
+        let vNumero= Number(document.getElementById("numero").value);
+        let vResto= (vNumero % 2) 
+        let vMensaje= " "
+        
+        console.log (vResto)
+        if (vResto <= 0) {
+                vMensaje= "El número es PAR";
+            } else if (vResto > 0) {
+                vMensaje= "El número es IMPAR";
+            }
+        document.getElementById("resultado").innerHTML= vMensaje
+
+    }
+
+    </script>
+</body>
+</html>

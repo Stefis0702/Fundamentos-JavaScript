@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>TITULO DE LA PESTAÑA DEL NAVEGADOR</title>
+</head>
+
+<body>
+   <h1>DIVISION POLITICO TERRITORIAL DE ESPAÑA</h1>
+   <h2 id="comunidad1">CATALUÑA</h2>
+   <p>Cataluña es una de las 17 comunidades autónomas de España que está situada al noroeste de la península ibérica frente al mar mediterráneo.</p>
+   <p>Sus cuatro provincias son:</p>
+   <h3>BARCELONA</h3>
+   <h4>AREA METROPOLITANA</h4>
+   <h3>GIRONA</h3>
+   <h3>TARRAGONA</h3>
+   <h3 id="provincia4">LÉRIDA</h3>
+   <p>Cambiar a catalán Lérida. ¿Cómo se escribe? 
+      <input id="valor" type="text">
+      <button onclick="cambiarValor()">cambiar valor</button>
+   </p>
+
+   <script>
+
+      function cambiarValor() {
+         document.getElementById("comunidad1").innerHTML="Catalunya";
+         document.getElementById("comunidad1").style.color="cadetblue";
+         document.getElementById("comunidad1").style.textDecoration = "underline";
+
+         console.log("El valor del input valor es",document.getElementById("valor").value); 
+         document.getElementById("provincia4").innerHTML= document.getElementById("valor").value;
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMPOSICIÓN</title>
+  <style>
+    body {margin: 1em 2em;}
+    td, input {text-align: center;}
+  </style>
+</head>
+<body>
+  <details>
+    <summary><mark><strong>Enunciado</strong></mark></summary>
+    <p>Hacer una aplicación donde se introduzcan las coordenadas de dos líneas rectas y se calculen sus pendientes. Se deberá comparar además si las pendientes de ambas líneas son similares.</p>
+    <p>Las coordenadas están conformadas por un <strong>objeto Punto</strong> que esta formado a su vez por una posición <em>x</em> y una posición <em>y</em>.<br>Por lo tanto un <strong>objeto Linea</strong> está 
+    <span style="color:red">compuesto</span> por dos objetos Puntos.</p>
+    <p>El objeto Linea, además del método <em>pendiente()</em>, deberá tener los siguientes métodos:</p>
+    <ul>
+      <li><em>pendientePositiva():</em> retornará <code>true</code> en caso de que la pendiente sea positiva, caso contrario, retornará <code>false</code>.</li>
+      <li><em>pendienteSimilar(otraLinea):</em> retornará <code>true</code> en caso de que las pendientes de ambas líneas tengan el mismo signo, caso contrario, retornará <code>false</code>.</li>
+    </ul>
+    <p>El diagrama UML se muestra a continuación:</p>
+    <p><img src="./img/composicion.png" alt="composición" width="450px"></p>
+    <hr>
+  </details>
+  <h1>Introduzca los valores para las líneas</h1>
+  <table width="70%">
+      <tr>
+          <th width="15%"></th>
+          <th>Punto A (x)</th>
+          <th>Punto A (y)</th>
+          <th>Punto B (x)</th>
+          <th>Punto B (y)</th>
+          <th>&nbsp;</th>
+
+      </tr>
+      <tr>
+          <td><strong>Linea&nbsp;1</strong></td>
+          <td><input type="number" id="xA1" value="0" style="width:70px;"></td>
+          <td><input type="number" id="yA1" value="4" style="width:70px;"></td>
+          <td><input type="number" id="xB1" value="2" style="width:70px;"></td>
+          <td><input type="number" id="yB1" value="1" style="width:70px;"></td>
+          <td>&nbsp;</td>
+      </tr>
+      <tr>
+          <td><strong>Linea&nbsp;2</strong></td>
+          <td><input type="number" id="xA2" value="-3" style="width:70px;"></td>
+          <td><input type="number" id="yA2" value="-1" style="width:70px;"></td>
+          <td><input type="number" id="xB2" value="3" style="width:70px;"></td>
+          <td><input type="number" id="yB2" value="4" style="width:70px;"></td>
+          <td><button id="button" onclick="calcular()">Calcular</button>    
+          </td>
+      </tr>
+  </table>
+  <h1>Resultados</h1>
+  <p>Fórmula pendiente: <em><mark>(PuntoB(y) - PuntoA(y)) / (PuntoB(x) - PuntoA(x))</mark></em></p>
+  <ul>
+    <li>Linea A: <strong><span id="linea1"></span></strong></li>
+    <li>Pendiente Linea A: <strong><span id="pendiente1"></span></strong></li>
+    <li>Pendiente Linea A es positiva: <strong><span id="pend1posit"></span></strong></li>
+    <br>
+    <li>Linea B: <strong><span id="linea2"></span></strong></li>
+    <li>Pendiente Linea B: <strong><span id="pendiente2"></span></strong></li>
+    <li>Pendiente Linea B es positiva: <strong><span id="pend2posit"></span></strong></li>
+    <br>
+    <li>Pendientes similares: <strong><span id="similares"></span></strong></li>
+  </ul>  
+  <script src="./js/clases.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

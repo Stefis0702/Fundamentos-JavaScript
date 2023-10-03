@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beca</title>
+</head>
+<body>
+   <h1>Formulario Becas</h1>
+    <p>Rellena los siguientes datos, para saber si eres acreedor de una beca:</p>
+    <p>Edad: <input type="number" id="numero"></p>
+    <p>Posees título universitario?: <input type="text" id="titulo" placeholder="si/no"></p>
+    <p>Actualmente estás en el paro?: <input type="text" id="ocupacion" placeholder="si/no"></p>
+    
+    
+    <p><button onclick="enviar()"> Enviar</button></p>
+    
+    <p id="resultado"></p>
+    
+
+    <script>
+        
+        function enviar() {
+            
+         let vEdad= Number(document.getElementById("numero").value);
+         let vTitulo= (document.getElementById("titulo").value).toLowerCase();
+         let vOcupacion=(document.getElementById("ocupacion").value).toLowerCase();
+
+
+
+            if (vEdad >=18 && vTitulo =="si") {
+            document.getElementById("resultado").innerHTML= "Enhorabuena tienes la beca!";
+            } else if (vEdad >=18 && vOcupacion<="si") { 
+            document.getElementById("resultado").innerHTML= "Enhorabuena tienes la beca!";
+            } else if (vEdad <18 || vTitulo =="no") { 
+            document.getElementById("resultado").innerHTML= "Lo sentimos no cumples con todos los requisitos";
+             }  
+      
+         }
+        
+        
+        
+
+
+    </script>
+    
+</body>
+</html>

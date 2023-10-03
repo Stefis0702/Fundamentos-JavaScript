@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3M6</title>
+</head>
+
+<body>
+    <p><button onclick="menu(1)">Registrar fecha y hora</button></p>
+    <p id="p1"></p>
+    <p><button onclick="menu(2)">Posición de valor de un array</button>
+        <label class="label1">Array:</label><input id="array2" type="text" size="60" />
+        <label class="label1">Valor:</label><input id="valor" type="number" size="3" />
+    </p>
+    <p id="p2"></p>
+    <p><button onclick="menu(3)">Limpiar texto</button>
+        <label class="label1">Frase:</label><input id="frase" type="text" value="A Cornellà, Tània i Aina tallen roca."
+            size="60" />
+    </p>
+    <p id="p3"></p>
+    <p><button onclick="menu(4)">Devolver array filtrado</button>
+        <label class="label1">Array:</label>
+        <input id="arrayI" type="text" value=" Història universal, Història d'Espanya, Geografia, Història de la llengua catalana, Antropologia, Anglès" size="93" />
+        <label class="label1">Palabra:</label><input id="palabra" type="text" value="Història" size="15" />
+    </p>
+    
+    <p id="p4"></p>
+
+
+    <script>
+        let temps = [];
+
+        function fechaActual(data) {
+            temps.push(data);
+            document.getElementById("p1").innerHTML = temps;
+        }
+
+        function buscaArray(arreglo, valor) {
+            let posicion = -1;
+            let i = 0;
+            let largo = arreglo.legth;
+
+            while (i < largo && posicion == -1) {
+                if (parseInt(arreglo[i]) == parseInt(valor)) {
+                    posicion = i;
+                }
+                i++;
+            }
+            return posicion;
+        }
+
+        function limpiarTexto(frase) {
+
+            let valida = "abcdefghijklmnñopqrstuvwxyz";
+            let vocalA = "àáâ";
+            let vocalE = "èéê";
+            let vocalI = "ìíî";
+            let vocalO = "òóô";
+            let vocalU = "ùúû";
+
+            let fraseClean = "";
+            let largo = frase.length;
+            frase = frase.toLowerCase();
+
+            for (let i = 0; i < largo; i++) {
+                if (valida.includes(frase.charAt(i))) {
+                    fraseClean += frase.charAt(i);
+                }
+                if (vocalA.includes(frase.charAt(i))) {
+                    fraseClean += "a"
+                };
+                if (vocalA.includes(frase.charAt(i))) {
+                    fraseClean += "e"
+                };
+                if (vocalA.includes(frase.charAt(i))) {
+                    fraseClean += "i"
+                };
+                if (vocalA.includes(frase.charAt(i))) {
+                    fraseClean += "o"
+                };
+                if (vocalA.includes(frase.charAt(i))) {
+                    fraseClean += "u"
+                };
+            }
+            return fraseClean;
+        }
+        function filtraArray(array) {
+            let cadena = document.getElementById("arrayI").value;
+            let termino = document.getElementById("palabra").value;;
+            let posicion = cadena.indexOf(termino);
+            if (posicion !== -1)
+            console.log("La palabra está en la posición " + posicion);
+            else
+            console.log("No encontré lo que estás buscando");
+           
+        }
+
+
+        function menu(opcion) {
+            let mostrar= "";
+
+            switch (opcion) {
+                case 1:
+                    fechaActual(new Date());
+                    break;
+                case 2:
+                    let valor = document.getElementById("valor").value;
+                    let arreglo= document.getElementById("array2").value.split(",")
+                    mostrar= "El valor "+ valor+ "esta en la posicion "+ buscaArray(arreglo, valor);
+                    
+                    break;
+                case 3:
+                    let frase= document.getElementById("frase").value;
+                    mostrar= "La frase "+ frase + "despues de limpia: "+ limpiarTexto(frase)+ "<br>"
+                    break;
+                case 4: 
+                
+                let array= document.getElementById("arrayI").value.split(",");
+                let texto= document.getElementById("palabra").value;
+                let arreglofiltrado=filtraArray(array,texto);
+                mostrar= "El termino "+ texto + "<br>"
+                mostrar +="se encuentra en " 
+                break;
+            }
+            document.getElementById("p4").innerHTML= mostrar;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

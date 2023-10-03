@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body {font-family: 'Open Sans', 'Segoe UI', Tahoma, Verdana, Helvetica; margin: 0 auto; padding: 0 15em 5em 5em;}
+      h1{color:deeppink; font-size: 115%;}
+      p {margin:0; line-height: 1.5;}
+      span {display: inline-block; width: 15em;}
+   </style>
+   <title>TEST DIVERTIDO</title>
+</head>
+<body>
+   <h1>TEST DIVERTIDO</h1>
+   <p id="p1">1. Ordena estos animales en orden de preferencia:</p>
+   <blockquote>
+      <p><span id="vaca">Vaca: </span> <input type="number" size="5"/></p>
+      <p><span id="tigre">Tigre: </span> <input type="number" size="5"/></p>
+      <p><span id="oveja">Oveja: </span> <input type="number" size="5"/></p>
+      <p><span id="caballo">Caballo: </span> <input type="number" size="5"/></p>
+      <p><span id="mono">Mono: </span> <input type="number" size="5"/></p>
+   </blockquote>
+   <p id="p2">2. Escribe una palabra que describa lo siguiente:</p>
+   <blockquote>
+      <p><span id="perro">Perro: </span> <input type="text"/></p>
+      <p><span id="gato">Gato: </span> <input type="text"/></p>
+      <p><span id="rata">Rata: </span> <input type="text"/></p>
+      <p><span id="cafe">Café: </span> <input type="text"/></p>
+      <p><span id="mar">Mar: </span> <input type="text"/></p>
+   </blockquote>
+   <p id="p3">3. Indica alguien importante para tí, que te sugiera este color:</p>
+   <blockquote>
+      <p><span id="amarillo">Amarillo: </span> <input type="text"/></p>
+      <p><span id="naranja">Naranja: </span> <input type="text"/></p>
+      <p><span id="blanco">Blanco: </span> <input type="text"/></p>
+      <p><span id="rojo">Rojo: </span> <input type="text"/></p>
+      <p><span id="verde">Verde: </span> <input type="text"/></p>
+   </blockquote>
+   <p><button onclick="calcular()"> resultados </button></p>
+
+   <script>
+      // Completar la siguiente función para que el test se haga operativo
+      // La <b> coloca en negrita el texto
+         
+      function calcular(){
+         document.getElementById('p1').innerHTML ='<b> Tu orden de prioridades:</b>';
+         document.getElementById('vaca').innerHTML ='Tu carrera';
+         document.getElementById('tigre').innerHTML ='El Orgullo';
+         document.getElementById('oveja').innerHTML ='El Amor';
+         document.getElementById('caballo').innerHTML ='La Familia';
+         document.getElementById('mono').innerHTML ='El Dinero';
+
+         document.getElementById('p2').innerHTML ='<b> Como ves la vida:</b>';
+         document.getElementById('perro').innerHTML ='Yo Soy...';
+         document.getElementById('gato').innerHTML ='Mi Pareja,';
+         document.getElementById('rata').innerHTML ='Lo que mas odio:';
+         document.getElementById('cafe').innerHTML ='Para mi el sexo es';
+         document.getElementById('mar').innerHTML ='Y la vida...';
+
+         document.getElementById('p3').innerHTML ='<b> Tu gente:</b>';
+         document.getElementById('amarillo').innerHTML ='Nunca re olvidara';
+         document.getElementById('naranja').innerHTML ='Puede ser tu gran amigo/a';
+         document.getElementById('blanco').innerHTML ='Tu Alma Gemela:';
+         document.getElementById('rojo').innerHTML ='Realmente amas a...';
+         document.getElementById('verde').innerHTML ='Siempre estara en tu memoria';
+
+
+         
+
+      }
+   </script>
+ 
+</body>
+</html>

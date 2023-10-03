@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7M7.1</title>
+</head>
+
+<body>
+    <h1>Dibujar</h1>
+
+
+
+    <p>Escribe un número: <input type="number" id="numero" value></p>
+    <p>Escribe un carácter: <input type="text" id="text" value></p>
+
+    <p id="boton"><button onclick="dibujar()">Dibujar</button></p>
+
+    <p id="cuadrado"></p>
+
+    <script>
+        function dibujar() {
+
+            
+            let num = parseInt(document.getElementById("numero").value);
+            let carac = document.getElementById("text").value;
+
+
+            document.getElementById("cuadrado").innerHTML = "";
+
+            if (num>=2 && num<=50){ 
+            for (let f = 1; f <= num; f ++) { 
+                document.getElementById("cuadrado").innerHTML += carac + " ";
+
+                for (let c = 1; c <= num; c ++) { 
+                    document.getElementById("cuadrado").innerHTML += carac + " ";
+                }
+
+                document.getElementById("cuadrado").innerHTML += "<br>";
+            }
+        }
+    }
+    </script>
+
+
+
+</body>
+
+</html>

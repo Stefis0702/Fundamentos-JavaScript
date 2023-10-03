@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JUGAR CON VALORES</title>
+</head>
+<body>
+      <p>Indica tu nombre: <input id="nombre" type="text" value="Vilma"></p>
+      <p>Indica tu apellido: <input id="apellido" type="text" value="Picapiedra"></p>
+      <p>Dime tu edad: <input type="number" id="edad" value="28"></p>
+      <!-- TODO LO QUE VIENE DESDE HTML ES TEXTO (STRING) -->
+      <p><button onclick="operaciones()"> Resultado </button></p>
+      <p><button onclick="operaciones2()"> Resultado con alert</button></p>
+      <p id="nombreCompleto"></p>
+      <p id="edadFutura"></p>
+
+   <script>
+      "use strict"; 
+      function operaciones() {
+
+         let vNombreCompleto = document.getElementById("nombre").value + " " + document.getElementById("apellido").value;
+
+         let vEdad;
+         console.log("Variable vEdad está guardando ", vEdad);
+         console.log("vEdad está guardando un dato de tipo", typeof(vEdad));
+
+         vEdad = Number(document.getElementById("edad").value);
+         console.log("vEdad está guardando un dato de tipo", typeof(vEdad));
+         
+         document.getElementById("nombreCompleto").innerHTML = vNombreCompleto;
+         document.getElementById("edadFutura").innerHTML = "Dentro de 5 años tendrás " + (vEdad + 5);
+      }
+      function operaciones2() {
+
+         let vNom= prompt("Indica tu nombre: ", "Vilma");
+         let vApellido= prompt("Indica tu apellido: ", "Picapiedra");
+         let vNombreCompleto = vNom + " " + vApellido;
+
+        
+         vEdad = Number(prompt("Dime tu edad","28"));
+         console.log("vEdad está guardando un dato de tipo", typeof(vEdad));
+
+         alert(vNombreCompleto);
+         alert("Dentro de 5 años tendrás " + (vEdad + 5));
+
+         let vRespuesta= confirm("¿Te gusta Javascript?")
+         alert("Has dicho"+ "Vrespuesta")
+      }
+
+
+
+
+   </script>
+</body>
+</html>

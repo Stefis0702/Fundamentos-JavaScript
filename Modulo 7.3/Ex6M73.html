@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6 M7.3</title>
+</head>
+
+<body>
+    <details>
+        <summary> Ejercicio 6 Modulo 7.3 </summary>
+        <p> Comprobar si una frase introducida por el usuario está formada sólo por minúsculas,<br>
+            sólo por mayúsculas o por minúsculas y mayúsculas. </p>
+
+    </details>
+    <h1>Suma de pares e impares </h1>
+
+
+    <p><button onclick="analizar()">Comprobar</button></p>
+
+    <p id="respuesta"></p>
+
+    <script>
+        function analizar() {
+
+
+            let arrayNum = [];
+            let n = parseInt(prompt("¿Cuántos números desea ingresar?"));
+
+            for (let i = 0; i < n; i++) {
+                let num = parseInt(prompt(`Ingrese el número ${i+1}:`));
+                arrayNum.push(num);
+            }
+
+            let sumaPares = 0;
+            let sumaImpares = 0;
+
+            for (let i = 0; i < arrayNum.length; i++) {
+                if (arrayNum[i] % 2 === 0) {
+                    sumaPares += arrayNum[i];
+                } else {
+                    sumaImpares += arrayNum[i];
+                }
+            }
+
+            document.getElementById("respuesta").innerHTML = `La suma de todos los números pares es : ${sumaPares}`;
+            document.getElementById("respuesta").innerHTML += `La suma de todos los números impares es : ${sumaImpares}`;
+        }
+
+        
+
+
+       
+    
+    </script>
+
+</body>
+
+</html>

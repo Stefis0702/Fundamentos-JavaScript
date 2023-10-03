@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4M4</title>
+</head>
+<body>
+    <h1>Calculemos</h1>
+    <p>Ahora dame un mes, solo utilizando números del 1 al 12 y sabrás cuantos dias tiene este mes:</p>
+    <p>Mes: <input type="number" id="numero"></p>
+    <p><button onclick="calcular()"> Calcular</button></p>
+    <p id="resultado"></p>
+    
+    <script>
+        function calcular() {
+
+            let vMes= Number(document.getElementById("numero").value);
+
+            switch(vMes){
+                case 1: document.getElementById("resultado").innerHTML="Enero tiene 31 dias";
+                break;
+                case 2: document.getElementById("resultado").innerHTML="Febrero tiene 28 dias";
+                break;
+                case 3: document.getElementById("resultado").innerHTML="Marzo tiene 31 dias";
+                break;
+                case 4: document.getElementById("resultado").innerHTML="Abril tiene 30 dias";
+                break;
+                case 5: document.getElementById("resultado").innerHTML="Mayo tiene 31 dias";
+                break;
+                case 6: document.getElementById("resultado").innerHTML="Junio tiene 30 dias";
+                break;
+                case 7: document.getElementById("resultado").innerHTML="Julio tiene 31 dias";
+                break;
+                case 8: document.getElementById("resultado").innerHTML="Agosto tiene 31 dias";
+                break;
+                case 9: document.getElementById("resultado").innerHTML="Septiembre tiene 30 dias";
+                break;
+                case 10: document.getElementById("resultado").innerHTML="Octubre tiene 31 dias";
+                break;
+                case 11: document.getElementById("resultado").innerHTML="Noviembre tiene 30 dias";
+                break;
+                case 12: document.getElementById("resultado").innerHTML="Diciembre tiene 31 dias";
+                break;
+                
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

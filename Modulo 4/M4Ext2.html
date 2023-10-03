@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4Ext2</title>
+</head>
+<body>
+    <h1>De números a letras</h1>
+    
+    <p>Dame un número entre 0 y 99: <input type="number" id="num" value="0"></p>
+    
+    <p><button onclick="calcular()">Transformar</button></p>
+    <p id="resultado"></p>
+    
+
+
+    <script>
+        function calcular() { 
+
+
+        let vNum= parseInt(document.getElementById("num").value);
+        let vUnidad=vNum% 10;
+        let vDecena = parseInt( vNum/10);
+        const unidad=["cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece", "catorce", "quince", "diesciseis", "diecisiete", "dieciocho", "diecinueve"];
+        const decenas= ["", "diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"];
+
+        let letraUnidad= unidad[vUnidad];
+        let letraDecenas= decenas[vDecena];
+        let vResultado= "";
+
+
+        if (vNum<20){
+            vResultado= unidad[vNum];
+
+        }else if (vUnidad==0) {
+           
+                vResultado= letraDecenas 
+            
+
+        }else {
+            vResultado= letraDecenas + " Y " + letraUnidad;
+
+        }
+
+        document.getElementById("resultado").innerHTML= vResultado;
+        
+        }
+
+     </script>
+</body>
+</html>

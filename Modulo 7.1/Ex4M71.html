@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4M7.1</title>
+</head>
+
+<body>
+    <h1>Juguemos</h1>
+    <p>Ahora escribe dos numeros:</p>
+    <p>Número 1:<input type="number" id="num1" value></p>
+    <p>Número 2:<input type="number" id="num2" value></p>
+
+    <p><button onclick="calcular()">Resultado</button></p>
+    <p id="resultado"></p>
+
+
+    <script>
+        function calcular() {
+
+            let vNumero1 = Number(document.getElementById("num1").value);
+            let vNumero2 = Number(document.getElementById("num2").value);
+
+
+            if ((vNumero1 < 0) || (vNumero2 > 0) || (vNumero1 > 0) || (vNumero2 < 0)) {
+                document.getElementById("resultado").innerHTML =
+                    "Lo sentimos...Uno de los dos números es negativo"
+            } else {
+                document.getElementById("resultado").innerHTML = "Los dos números tienen el mismo signo ";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

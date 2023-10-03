@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+</head>
+<body>
+    <h1>Ahora rellena estos datos:</h1>
+
+    
+    <p><button onclick="enviar()"> Enviar a consola </button></p>
+    <p><button onclick="enviar2()"> Enviar con alert</button></p>
+    <p id="tuNombre"></p>
+    <p id="tuApellido"></p>
+    <p id="tuEdad"></p>
+
+    <script>
+        let vNombre= prompt("Indica tu nombre:");
+        let vApellido= prompt("Indica tu apellido:");
+        let vEdad= Number(prompt("Indica tu edad:"));
+
+        function enviar() {
+
+        
+
+        document.getElementById("tuNombre").innerHTML= vNombre;
+        document.getElementById("tuApellido").innerHTML= vApellido;
+        document.getElementById("tuEdad").innerHTML= vEdad;
+        console.log("Tu nombre es:",vNombre)
+        console.log("Tu apellido es:",vApellido)
+        console.log("Tu edad es",vEdad)
+        
+        
+       }
+       function enviar2() {
+        
+        
+        alert("Tu nombre es: " + (vNombre));
+        alert("Tu apellido es: " + (vApellido));
+        alert("Tu edad es: " + (vEdad));
+
+}
+
+    </script>
+    
+</body>
+</html>

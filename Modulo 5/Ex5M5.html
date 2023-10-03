@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beca</title>
+</head>
+
+<body>
+    <h1>Formulario Becas</h1>
+   
+
+    <p><button onclick="enviar()"> Rellena tus datos</button></p>
+
+    <p id="resultado"></p>
+
+
+    <script>
+        function enviar() {
+
+            let vIntentos = 5;
+            let vNom = [];
+
+            while (vIntentos > 0) {
+                let vNombre = prompt("Cual es tu nombre?");
+
+                let vEdad = prompt("¿Cual es tu edad?")
+                let vTitulo = prompt("¿Tienes titulo universitario?")
+                let vOcupacion = prompt("¿Estás en el paro?")
+
+
+
+
+                if ((vEdad >= 18 && vTitulo == "si") || vOcupacion == "si") {
+                    document.getElementById("resultado").innerHTML = "Enhorabuena! puedes iniciar a tramitar la beca";
+                    vIntentos--;
+                    vNom.push(vNombre)
+                } else if (vEdad < 18 || vOcupacion == "no" || vTitulo == "no") {
+                    document.getElementById("resultado").innerHTML = "Enhorabuena tienes la beca!";
+                }
+                if (vIntentos < 1) {
+                    document.getElementById("resultado").innerHTML = "Lo sentimos ya no hay más becas disponibles";
+                }
+
+            }
+            document.getElementById("resultado").innerHTML = "Lo sentimos ya no hay más becas disponibles. Los becarios son: " + vNom;
+        }
+    </script>
+
+</body>
+
+</html>

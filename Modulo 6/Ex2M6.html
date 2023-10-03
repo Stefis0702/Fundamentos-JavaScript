@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2M6</title>
+</head>
+<body>
+    <h1>Calculemos la media!</h1>
+
+    
+    <p><button onclick="main()">Introduce los datos aqui</button></p>
+    <p id="resultado1"></p>
+    
+
+
+    <script>
+        function media(numPersonas) {
+            let edadPer= 0;
+            let medianaU= "";
+            let edadPer2= 0;
+
+            for(let i = 0; i<numPersonas; i++){
+                do{
+                    edadPer= Math.abs(parseInt(prompt("Edad de la persona " + (i+1) + " entre 0 y 120 ")));
+                } while ((edadPer>120)||(edadPer<0));
+                edadPer2 += edadPer;
+            }
+            medianaU= "La media de edad es de: " + (edadPer2 / numPersonas).toFixed(0);
+            return medianaU
+
+        }
+        function main() {
+            let numPersonas= Math.abs(parseInt(prompt("Cuantas personas hay?")));
+            let vMediana= media(numPersonas);
+            
+            document.getElementById("resultado1").innerHTML=vMediana;
+
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>

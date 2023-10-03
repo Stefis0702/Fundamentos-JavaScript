@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5M4</title>
+</head>
+<body>
+    <h1>Calculemos</h1>
+    <p>Ahora dame dos números:</p>
+    <p>Número 1: <input type="number" id="numero1"></p>
+    <p>Número 2: <input type="number" id="numero2"></p>
+    <p>Ahora dame una operacion (+-*/):</p>
+    <p>Operación: <input type="text" id="opera"></p>
+    <p><button onclick="calcular()"> Calcular</button></p>
+    <p id="resultado"></p>
+
+<script>
+    function calcular() {
+
+    let vNumero1= Number(document.getElementById("numero1").value);
+    let vNumero2= Number(document.getElementById("numero1").value);
+    let vOpera= document.getElementById("opera").value;
+
+
+    switch(vOpera){
+
+        case "+": 
+        if (vOpera== "+") {
+            document.getElementById("resultado").innerHTML= "el resultado de ";
+        }
+        break;
+
+        }
+        
+
+
+
+
+    }
+
+    
+
+</script>
+    
+</body>
+</html>
+

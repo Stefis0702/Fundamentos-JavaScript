@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Explica IF</title>
+</head>
+
+<body>
+   <p>Queremos obtener los datos de una persona (nombre, edad, sexo)</p>
+   <p>Dependiendo del sexo saludaremos de la siguiente manera: 'Hola Don' + nombre o 'Hola Doña' nombre</p>
+
+   <p>Escribe tu nombre: <input type="text" id="nombre" value="Laura"></p>
+   <p>Escribe tu edad: <input type="number" id="edad" value="23"></p>
+   <p>Indica tu género:
+      <input type="text" id="genero" placeholder="f=mujer / m=hombre" value="f"> </p> 
+   <p>
+
+      <button onclick="saludar1()">Saludar con if</button>
+      <button onclick="saludar2()">Saludar con if-else</button>
+      <button onclick="saludar3()">Saludar con if-else if - else</button>
+   </p>
+
+   <script>
+
+      function saludar1() {
+         vNombre = document.getElementById("nombre").value;
+         vEdad = parseInt(document.getElementById("edad").value);
+         vGenero = document.getElementById("genero").value;
+
+         if (vGenero == "f" || vGenero == "F") {
+            alert("Hola doña " + vNombre);
+         }
+
+         if (vGenero == "m" || vGenero == "M") {
+            alert("Hola don " + vNombre);
+         }
+
+         if (vGenero != "f" && vGenero != "F" && vGenero != "m" && vGenero != "M") {
+            alert("error: Escribe f o m en género");
+         }
+
+      }
+
+      function saludar2() {
+         vNombre = document.getElementById("nombre").value;
+         vEdad = parseInt(document.getElementById("edad").value);
+         vGenero = document.getElementById("genero").value;
+
+         if (vGenero == "f" || vGenero == "F") {
+            alert("Hola doña " + vNombre);
+         } else { // else se lee como y si no...
+            alert("Hola don " + vNombre);
+         }
+
+      }
+
+      function saludar3() {
+         vNombre = document.getElementById("nombre").value;
+         vEdad = parseInt(document.getElementById("edad").value);
+         vGenero = document.getElementById("genero").value;
+
+         if (vGenero == "f" || vGenero == "F") {
+            alert("Hola doña " + vNombre);
+         } else if (vGenero == "m" || vGenero == "M") { // si no..., si (condición)
+            alert("Hola don " + vNombre);
+         } else { // y si no... 
+            alert("error: Escribe f o m en género");
+         }
+
+      }
+   </script>
+
+</body>
+
+</html>

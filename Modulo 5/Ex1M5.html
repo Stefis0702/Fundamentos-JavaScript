@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1M5</title>
+</head>
+
+<body>
+    <!--primero crear un formato base html con el boton el espacio para pedir el numero y un parrafo para el resultado -->
+    <!--luego crear funcion -->
+    <!--declarar la variable para el numero que da el usuario, crear el array, crear una variable para la respuesta --> 
+    <!-- crear un if para definir que solo se pueden colocar numero entre 1 y 10 y crear el mensaje de error-->
+    <!--crear el bucle for con la condicion para pedir por promt que el usuario ingrese las palabras segun el numero que eligio -->
+    <!--crear el bucle for con la condicion para que nos muestre el resultado de las palabras que el usuario escribio y poner un salto de pag -->
+    <!--crear el document para mostrar la variable que creamos para agrupar el resultado -->
+   
+    <h1>Ahora Mira..!!</h1>
+
+    <p>Escribe un número del 1 al 10: <input type="number" id="numero" value></p>
+
+    <p><button onclick="enviar()">Mostrar</button></p>
+
+    <p id="resultado"></p>
+
+
+    <script>
+        function enviar() {
+
+            let vNum = parseInt(document.getElementById("numero").value);
+            let vCant = [];
+            let vResul = "";
+
+            if (vNum <= 0 || vNum > 10) {
+                document.getElementById("resultado").innerHTML = "Debe introducir un nùmero entre 1 y 10"
+            } else {
+
+                for (let i = 0; i <= (vNum - 1); i++) {
+                    let x = prompt("Ingresa una palabra:");
+                    vCant[i] = x;
+                }
+                for (let i = 0; i <= (vNum - 1); i++) {
+                    vResult += vCant[i] + "<br>";
+                }
+
+                document.getElementById("resultado").innerHTML = vResult;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

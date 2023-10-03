@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4M7.2</title>
+</head>
+
+<body>
+    <h1>Calculadora Factorial</h1>
+
+    <p>Escribe un número: <input type="number" id="numero1" value="0"></p>
+    <p><button onclick="resultado()">Resultado</button></p>
+    <p id="resultado"></p>
+
+    <script>
+        function resultado() {
+
+            let vNumero = Math.abs(parseInt(document.getElementById("numero1").value));
+            let cFactorial = 1;
+            let vLista=[]
+
+            if (vNumero > 0) {
+                for (let i = 1; i <= vNumero; i++) {
+                    cFactorial *= i;
+                    vLista.push(i)
+                }
+                document.getElementById("resultado").innerHTML = vLista.join("x") + "= " + cFactorial
+            } else {
+                document.getElementById("resultado").innerHTML = "Error...por favor escribe un número mayor que 0"
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

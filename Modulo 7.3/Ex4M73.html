@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4M7.3</title>
+</head>
+
+<body>
+    <details>
+        <summary> Ejercicio 4 Modulo 7.3 </summary>
+        <p> El usuario/a debe introducir un DNI y el programa debe decir si la letra es correcta o no con el número de
+            DNI. <br>
+            si la letra no es correcta, debe decir qué letra es la correcta.<br>
+            para calcular la letra DNI debes tomar el número de DNI a verificar y dividirlo entre 23.<br>
+            el resto se reemplaza por una letra que ya está asignada a ese número mediante la tabla adjunta: 
+            <img id="imagen" src="./dni.jpg"> </p>
+
+    </details>
+    <h1>Calcula la letra del DNI</h1>
+    <p>Introduce el NÚMERO de tu DNI:<input type="number" id="numdni" value></p>
+    <p>Introduce la LETRA de tu DNI:<input type="text" id="letdni" value></p>
+    
+    <p><button onclick="calcular()">Comprobar</button></p>
+    <p id="respuesta"></p>
+
+    <script>
+
+        function calcular(){
+
+        let vRespuesta= "";
+        let vAbec=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+        let vNum= Number(document.getElementById("numdni").value);
+        let vLetra=document.getElementById("letdni").value;
+        vLetra=vLetra.toUpperCase();
+        console.log(vLetra)
+
+        if(vNum<0 || vNum>99999999){
+            vRespuesta= "El valor proporcionado no es valido"
+        }else{
+            
+            let vCal= vAbec[vNum%23];
+            if(vCal!=vLetra){
+                vRespuesta= "La letra o el número no es válido";
+            }else{
+                vRespuesta= "El número de DNI y la letra son correctos"
+            }
+        }
+        document.getElementById("respuesta").innerHTML= vRespuesta
+    }
+
+    
+    </script>
+
+</body>
+
+</html>
